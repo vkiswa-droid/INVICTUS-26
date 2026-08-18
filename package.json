@@ -1,0 +1,14 @@
+{
+  "name": "invictus-2026-pro-web",
+  "version": "6.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "pg": "^8.16.3",
+    "dotenv": "^16.4.7",
+    "xlsx": "^0.18.5"
+  }
+}

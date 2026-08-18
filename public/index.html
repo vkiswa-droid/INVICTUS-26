@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>INVICTUS 2026 | Project Expo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<canvas id="bg3d" class="bg3d"></canvas>
+<div class="grid"></div>
+<header class="nav">
+  <a class="brand" href="#home"><span class="brandmark">DMI</span><span>DMI COLLEGE<br><b>OF ENGINEERING</b></span></a>
+  <nav><a href="#home">HOME</a><a href="#about">ABOUT</a><a href="#event">EVENT</a><a href="#timeline">TIMELINE</a><a href="#gallery">GALLERY</a><a href="#contact">CONTACT</a></nav>
+  <a class="btn small" href="#register">REGISTER NOW</a><a class="btn small admin-btn" href="/admin/login">ADMIN</a>
+  <button class="hamb" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="hero-copy reveal">
+    <p class="eyebrow">DMI COLLEGE OF ENGINEERING PRESENTS</p>
+    <h1>INVICTUS <span>2026</span></h1>
+    <div class="expo">PROJECT EXPO</div>
+    <p class="meta">◉ 24/8/26 &nbsp; | &nbsp; ⌖ DMI COLLEGE OF ENGINEERING</p>
+    <p class="tag">INNOVATE <i>•</i> INSPIRE <i>•</i> IMPACT</p>
+    <div class="actions"><a class="btn" href="#register">REGISTER NOW <b>→</b></a></div>
+  </div>
+  <div class="orb-wrap reveal">
+    <div class="orb" aria-label="INVICTUS animated 3D visual">
+      <canvas id="hero3d"></canvas>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section reveal"><p class="eyebrow">THE EXPERIENCE</p><h2>Build. Present. <span>Impact.</span></h2><p class="lead">A professional project expo where student innovators transform ideas into real-world solutions, demonstrate engineering excellence and connect with an audience of peers, mentors and industry.</p>
+<div class="cards"><article data-tilt><b>01</b><h3>INNOVATION</h3><p>Turn bold ideas into working prototypes and meaningful solutions.</p></article><article data-tilt><b>02</b><h3>EXHIBITION</h3><p>Present your project in a premium expo environment.</p></article><article data-tilt><b>03</b><h3>RECOGNITION</h3><p>Get feedback, visibility and an opportunity to stand out.</p></article></div></section>
+
+<section id="event" class="section dark reveal"><p class="eyebrow">EVENT DETAILS</p><h2>One Day. <span>Many Ideas.</span></h2>
+<div class="event-grid"><div><strong>24/8/26</strong><small>EVENT DATE</small></div><div><strong>DMI</strong><small>COLLEGE OF ENGINEERING</small></div><div><strong>3</strong><small>TEAM MEMBERS</small></div><div><strong>ALL</strong><small>ENGINEERING BRANCHES</small></div></div></section>
+
+<section id="timeline" class="section reveal"><p class="eyebrow">ROADMAP</p><h2>Event <span>Timeline</span></h2><div class="timeline"><div><b>01</b><h3>REGISTRATION</h3><p>Submit your team and project details.</p></div><div><b>02</b><h3>SCREENING</h3><p>Project details are reviewed by the organizing team.</p></div><div><b>03</b><h3>EXPO DAY</h3><p>Present, demonstrate and connect.</p></div></div></section>
+
+<section id="gallery" class="section dark reveal"><p class="eyebrow">VISUAL IDENTITY</p><h2>Future <span>in Focus.</span></h2><div class="gallery"><div data-tilt>PROJECT<br>LAB</div><div data-tilt>ROBOTICS<br>ZONE</div><div data-tilt>AI &amp;<br>CODE</div></div></section>
+
+<section id="register" class="section reveal"><p class="eyebrow">JOIN INVICTUS</p><h2>Project Expo <span>Registration</span></h2>
+<form id="regForm"><div class="form-grid">
+<label>Team / Project Name *<input name="teamName" required></label><label>Team Leader Name *<input name="leader" required></label>
+<label>College Name *<input name="college" required></label><label>Department<select name="department"><option value="">Select</option><option>CSE</option><option>ECE</option><option>EEE</option><option>Mechanical</option><option>Civil</option><option>AI & DS</option><option>Other</option></select></label>
+<label>Year / Semester<input name="year"></label><label>Phone Number *<input name="phone" required></label>
+<label>Email Address *<input type="email" name="email" required></label><label>Number of Team Members * <small>(maximum 3 per team)</small><input type="number" name="members" min="1" max="3" step="1" required inputmode="numeric" placeholder="1 to 3"></label>
+<label class="full">Project Title<input name="project"></label><label class="full">Additional Team Member Names <small>(up to 2 additional members; team leader counts as 1)</small><input name="memberNames" placeholder="Member 2, Member 3"></label><label class="full">Project Description<textarea name="abstract" rows="5"></textarea></label>
+</div><button class="btn" type="submit">SUBMIT REGISTRATION →</button><p id="result"></p></form></section>
+</main>
+<footer id="contact"><div><b>INVICTUS 2026</b><br>PROJECT EXPO</div><div>24/8/26 · DMI COLLEGE OF ENGINEERING</div><div><b>CONTACT US</b><br><a href="tel:9092270526">Lingeshwar: 9092270526</a><br><a href="tel:9342702744">Kiswa: 9342702744</a></div><div>© 2026 DMI College of Engineering</div></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="/scene3d.js"></script>
+<script src="/app.js"></script>
+</body></html>
