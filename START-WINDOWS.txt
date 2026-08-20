@@ -1,0 +1,17 @@
+INVICTUS 2026 - EASY START
+
+1. Open PowerShell in THIS folder (the folder that contains package.json).
+2. Put your working .env file in THIS folder.
+3. Run: npm install
+4. Run: npm start
+
+If port 3000 is already busy, this version automatically uses port 3001 locally.
+
+Website:
+  http://localhost:3000/
+  or http://localhost:3001/ if 3000 was busy
+
+Admin:
+  /admin/login
+
+Do NOT upload .env or node_modules to GitHub.
